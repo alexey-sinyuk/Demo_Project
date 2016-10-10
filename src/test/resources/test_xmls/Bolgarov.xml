@@ -10,7 +10,7 @@
            <class name="test.AdminPages.Posts.SelectAdminPostsTab"/> <!--  -->
            <class name="test.AdminPages.Posts.PostTabAddNewPostByButton"/>
            <class name="test.AdminPages.Posts.PostTabAddNewPostByUrl"/>
-           <class name="test.AdminPages.Posts.PostTabAddNewPostByButtonViaPostsMenu"/>
+           <!--<class name="test.AdminPages.Posts.PostTabAddNewPostByButtonViaPostsMenu"/>-->
            <class name="test.AdminPages.Posts.PostTabAddNewPostByButtonViaPlusMenu"/>
         </classes>
     </test>
