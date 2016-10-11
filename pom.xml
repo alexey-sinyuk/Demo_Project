@@ -268,7 +268,9 @@
       <id>chrome_ongrid</id>
       <properties>
         <capabilities>/chrome.capabilities</capabilities>
-        <grid.url>${remote.grid.url}</grid.url>
+        <!--<grid.url>${remote.grid.url}</grid.url>-->
+          <grid.url>http://qa-u1604.vlab.lohika.com:4444/wd/hub/</grid.url>
+
           <site.url>${target.site}</site.url>
         <highlight>false</highlight>
       </properties>
