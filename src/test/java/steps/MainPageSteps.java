@@ -70,7 +70,7 @@ public class MainPageSteps extends BaseTestBDD {
     @And("^I do logout from Dashboard$")
     public void iDoLogoutFromDashboard(){
         adminPage.ClickLogoutLink();
-        Assert.assertTrue(loginPage.getTitle().contains("Log In"),"Login page opened.");
+        Assert.assertTrue(loginPage.getTitle().contains("Log In123"),"Login page opened.");
         Assert.assertTrue(loginPage.loginMessage.getText().contains("You are now logged out"),"User logged out.");
     }
 }
