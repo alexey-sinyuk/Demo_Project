@@ -29,10 +29,12 @@ public class MyAccountPage extends Page {
     @FindBy(how = How.ID, using = "password")
     public WebElement password;
 
-    @FindBy(how = How.NAME, using = "login")
+    //@FindBy(how = How.NAME, using = "login")
+    @FindBy(how = How.XPATH, using = ".//*[@id='post-12']/div/div/form/p[3]/input[3]")
     public WebElement buttonLogin;
 
-    @FindBy(how = How.LINK_TEXT, using = "Sign out")
+    //@FindBy(how = How.LINK_TEXT, using = "Sign out")
+    @FindBy(how = How.XPATH, using = ".//*[@id='post-12']/div/div/div/p[1]/a")
     public WebElement linkSignOut;
 
     @FindBy(how = How.LINK_TEXT, using = "Account Details")
@@ -83,7 +85,7 @@ public class MyAccountPage extends Page {
         this.password.clear();
         this.username.sendKeys(username);
         this.password.sendKeys(password);
-        this.buttonLogin.click();
+        buttonLogin.click();
     }
 
     public void SignOut()

@@ -28,6 +28,14 @@ public class MyAccountDetails extends BaseTest {
   }
 
   @Test
+  public void myAccountDetails (){
+    CheckingAccountLinks();
+    ChangingAccountDetails();
+    ChangingPassword();
+    ChangingBillingAddress();
+  }
+
+  //@Test
   public void CheckingAccountLinks()
   {
     myAccPage.Open(baseUrl);
@@ -53,7 +61,7 @@ public class MyAccountDetails extends BaseTest {
 
   }
 
-  @Test
+  //@Test
   public void ChangingAccountDetails() {
     //Changing General Account Details
     myAccPage.Open(baseUrl);
@@ -76,7 +84,7 @@ public class MyAccountDetails extends BaseTest {
   }
 
   //Changing Password
-  @Test
+  //@Test
   public void ChangingPassword() {
     myAccPage.Open(baseUrl);
     myAccPage.LoginAs("ezaichuk","dferfrfzrhfcjnf");
@@ -96,7 +104,7 @@ public class MyAccountDetails extends BaseTest {
     myAccPage.SignOut();
   }
 
-  @Test
+  //@Test
   public void ChangingBillingAddress()
   {
     myAccPage.Open(baseUrl);

@@ -8,6 +8,6 @@
         <suite-file path="test_xmls/Melnyk.xml" />
         <suite-file path="test_xmls/Tsapock.xml" />
         <suite-file path="test_xmls/Golovatyi.xml" />
-        <suite-file path="test_xmls/Zaichuk.xml" />
+        <!--<suite-file path="test_xmls/Zaichuk.xml" />-->
     </suite-files>
 </suite>
