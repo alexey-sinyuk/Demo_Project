@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.OurProducts;
-import ru.yandex.qatools.allure.annotations.Step;
 import test.BaseTest;
 import util.OurProductFilter;
 
@@ -36,13 +35,13 @@ public class OurProductsTest extends BaseTest {
     }
 
 
-    @Step
+
     public void openOurProductPage() {
         mainPage.Open(baseUrl);
         mainPage.ClickOurProductsLink();
     }
 
-    @Step
+
     public void selectAndCheckFilters() {
         ourProducts.selectUpperFilter(OurProductFilter.DATE.getValue());
         Assert.assertTrue(ourProducts.getUpperProductsFilter().getFirstSelectedOption().getText().contains(OurProductFilter.DATE.getValue()));
@@ -50,7 +49,7 @@ public class OurProductsTest extends BaseTest {
 
     }
 
-    @Step
+
     public void checkProductsNames() {
         Assert.assertTrue(ourProducts.checkProductsNames(ourProducts.getProductNames()));
     }

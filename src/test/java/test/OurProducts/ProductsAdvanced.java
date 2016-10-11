@@ -8,7 +8,6 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.ProductsPage;
 import pages.examplePage;
-import ru.yandex.qatools.allure.annotations.Step;
 import test.BaseTest;
 
 public class ProductsAdvanced extends BaseTest {
@@ -38,37 +37,37 @@ public class ProductsAdvanced extends BaseTest {
         Logout();
     }
 
-    @Step
+
     public void OpenLoginPage() {
         mainPage.Open(baseUrl + "wp-login.php");
         Assert.assertTrue(mainPage.getTitle().contains("virtual-shop"), "Verify Main page opened.");
     }
 
-    @Step
+
     public void ViewerLogin() {
         loginPage.LoginAs("viewer_as", "P@ssw0rd");
         Assert.assertTrue(mainPage.myAccountContent.getText().contains("not Viewer AS"),"Verify login made as Viewer AS.");
     }
 
-    @Step
+
     public void OpenProductsPage() {
         productsPage.Open(baseUrl + "/shop/");
         Assert.assertTrue(mainPage.getTitle().contains("Products"), "Verifying correct page [Products] is opened.");
     }
 
-    @Step
+
     public void SearchForProduct() {
         productsPage.PerformSearch("Coin");
         Assert.assertTrue("Search Results for: Coin".equals(homepage.header.getText()), "Checking header label.");
     }
 
-    @Step
+
     private void DrillToProduct() {
         productsPage.ClickItemLink();
         Assert.assertEquals(productsPage.relatedProducts.getText(), "Related Products", "Verifying related products section.");
     }
 
-    @Step
+
     public void Logout() {
         mainPage.ClickLogoutLink();
         Assert.assertTrue(loginPage.getTitle().contains("Log In"),"Verify Login page opened.");

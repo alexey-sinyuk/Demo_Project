@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.NewsPage;
-import ru.yandex.qatools.allure.annotations.Step;
 import test.BaseTest;
 
 
@@ -30,7 +29,7 @@ public class LogInToNewsNegative extends BaseTest {
         LogInToNews5();
 
     }
-    @Step
+
     public void OpenNewsPage (){
 
         news.Open(baseUrl);
@@ -39,27 +38,27 @@ public class LogInToNewsNegative extends BaseTest {
         Assert.assertTrue(news.getTitle().contains("News"), "Verify News tab is opened.");
     }
 
-    @Step
+
     public void LogInToNews1 (){
         news.AdminNews("testpas1111");
         Assert.assertTrue(news.newsTitle.getText().contains("This content is password protected. To view it please enter your password below"), "Verify News tab is NOT opened as Admin" );
     }
-    @Step
+
     public void LogInToNews2 (){
         news.AdminNews("testpas1111");
         Assert.assertTrue(news.newsTitle.getText().contains("This content is password protected. To view it please enter your password below"), "Verify News tab is NOT opened as Admin" );
     }
-    @Step
+
     public void LogInToNews3 (){
         news.AdminNews("testpas1111");
         Assert.assertTrue(news.newsTitle.getText().contains("This content is password protected. To view it please enter your password below"), "Verify News tab is NOT opened as Admin" );
     }
-    @Step
+
     public void LogInToNews4 (){
         news.AdminNews("testpas1111");
         Assert.assertTrue(news.newsTitle.getText().contains("This content is password protected. To view it please enter your password below"), "Verify News tab is NOT opened as Admin" );
     }
-    @Step
+
     public void LogInToNews5 (){
         news.AdminNews("testpas1111");
         Assert.assertTrue(news.newsTitle.getText().contains("This content is password protected. To view it please enter your password below"), "Verify News tab is NOT opened as Admin" );

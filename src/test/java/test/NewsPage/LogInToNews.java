@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.NewsPage;
 import test.BaseTest;
-import ru.yandex.qatools.allure.annotations.Step;
 
 
 /**
@@ -27,7 +26,7 @@ public class LogInToNews extends BaseTest {
         LogToNews();
 
     }
-    @Step
+
     public void OpenNewsPage (){
 
         news.Open(baseUrl);
@@ -36,7 +35,7 @@ public class LogInToNews extends BaseTest {
         Assert.assertTrue(news.getTitle().contains("News"), "Verify News tab is opened.");
     }
 
-    @Step
+
     public void LogToNews (){
 
         news.AdminNews("testpas");
