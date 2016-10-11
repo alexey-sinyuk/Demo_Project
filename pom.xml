@@ -205,7 +205,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
     </profile>-->
-    <profile>
+    <!--<profile>
       <id>Grid on localhost. Connect to existing</id>
       <properties>
         <grid.url>http://localhost:4444/wd/hub/</grid.url>
@@ -252,7 +252,7 @@
           </plugin>
         </plugins>
       </build>
-    </profile>
+    </profile>-->
 
     <profile>
       <id>firefox_ongrid</id>
