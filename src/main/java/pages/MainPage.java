@@ -40,13 +40,10 @@ public class MainPage extends Page {
         driver.navigate().to(URL);
     }
 
-    public void ClickLoginLink (){
-
-        this.loginLink.click();
-    }
+    public void ClickLoginLink (){ loginLink.click(); }
 
     public void ClickLogoutLink (){
-        this.logoutLink.click();
+        logoutLink.click();
     }
 
     public void ClickHomeLink (){ homeLink.click(); }
