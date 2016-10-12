@@ -3,7 +3,7 @@
 ### Easy steps to start :
 * Clone repository :
 ```sh
- $ git clone https://github.com/ezaichuk/Demo_Project.git
+ $ git clone https://github.com/alexey-sinyuk/Demo_Project.git
 ```
 * Create your own branch and switch to it:
 ```sh
