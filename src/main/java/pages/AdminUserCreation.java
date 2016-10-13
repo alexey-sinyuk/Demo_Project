@@ -68,6 +68,11 @@ public class AdminUserCreation extends Page {
         showPasswordButton.click();
         //Entering password two times, because of Firefox issue, that only first letter entered
         for (int i=0; i<2; i++){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             this.password.clear();
             this.password.sendKeys(password);
         }

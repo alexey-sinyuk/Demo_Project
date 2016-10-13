@@ -1,6 +1,9 @@
 package test;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -27,6 +30,7 @@ public class BaseTestBDD {
     protected static Capabilities capabilities;
 
     protected static WebDriver driver;
+    protected static String dateStamp = "";
 
     public BaseTestBDD (){
         try {
@@ -35,7 +39,11 @@ public class BaseTestBDD {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        if (dateStamp == "") {
+            DateFormat dateFormat = new SimpleDateFormat("MMddHHmmss");
+            Date date = new Date();
+            dateStamp = dateFormat.format(date);
+        }
     }
 
     public void initTestSuite() throws IOException {
@@ -56,7 +64,7 @@ public class BaseTestBDD {
             WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
             driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         }
     }
 }
